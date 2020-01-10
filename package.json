@@ -1,0 +1,21 @@
+{
+  "name": "teams_and_players",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "db:delete": "dropdb players-browser",
+    "db:create": "createdb players-browser",
+    "db:schema": "psql -f schema.sql players-browser",
+    "db:seed": "psql -f seed.sql players-browser",
+    "db:launch": "psql players-browser",
+    "db:reset": "npm run db:delete && npm run db:create && npm run db:schema && npm run db:seed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
